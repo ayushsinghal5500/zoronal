@@ -1,7 +1,13 @@
 import axios from "axios";
 
+// For Production (Render)
+const baseURL = "https://zoronalbackend.onrender.com/api";
+
+// For Development (Local)
+// const baseURL = "http://localhost:5002/api";
+
 const api = axios.create({
-  baseURL: "http://localhost:5002/api",
+  baseURL,
   headers: {
     "Content-Type": "application/json",
   },
